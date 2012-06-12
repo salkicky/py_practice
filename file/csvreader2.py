@@ -14,9 +14,9 @@ csvfile.close
 
 print "ここからDictReaderを使う"
 
-reader = csv.DictReader(open('csvfile.csv'))
+reader = csv.DictReader(open('AutoCtrl_Area01_01.csv'))
 if csvfile != None:
 	for record in reader:
-		print record['ラベル']
-		print record['英語']
-		print record['日本語']
+		print record['時間'] + "   " + record[' 設定天井照度']
+		print int(record[' 白色出力値']) * int(record[' 設定天井照度'])
+        record.line

@@ -3,7 +3,8 @@
 import sys
 import unittest
 
-from MyCsvReader import MyCsvReader
+from CsvReader import CsvReader
+
 
 class TestMySuite(unittest.TestCase):
 
@@ -13,11 +14,10 @@ class TestMySuite(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testOfTest(self):
-        self.assertEqual(1, 1)
-
     def testNewClass(self):
-        self.assertTrue(MyCsvReader())
+        csr = CsvReader('AutoCtrl_Area01_01.csv')
+        csr.print()
+        
 
 
 if __name__ == '__main__':
